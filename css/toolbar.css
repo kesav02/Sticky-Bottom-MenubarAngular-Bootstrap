@@ -1,0 +1,26 @@
+.zzzBtnGroup100{
+	width:100%; <!-- so the tool bar will hold the entire width of the page -->
+}
+
+.zzzButton1Of4{
+	width:24%; <!-- so in case of 4 button each will take equal space. may need something more complex for more buttons or in case there is an extra button that 						should be smaller -->
+}
+
+.zzzMobileButtun {
+	border-width: 0px;
+    color: #333333;
+    background-image:none;
+    text-decoration: none;
+    transition: none;	
+}
+
+.zzzMobileButtonPrimary{
+	color:blue !important; <!-- Overiding any hover effects and making sure the primary one is allways marked -->
+}
+
+.zzzMobileButtonLine{
+    height: 4px;
+    background-color: blue;
+    width: 24%;
+	position: relative;
+}

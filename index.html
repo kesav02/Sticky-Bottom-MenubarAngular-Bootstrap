@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+</head>
+<html lang="en" ng-app="handyBy">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="lib/angular.js"></script>
+	<script src="lib/angular-route.js"></script>
+	<script src="lib/angular-animate.js"></script>
+
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="application/javascript" src="lib/fastclick.js"></script> 
+	<script type="application/javascript">
+		window.addEventListener('load', function () {
+			FastClick.attach(document.body);
+		}, false);
+	</script> 
+
+	<!-- HandyBy own JS files -->
+	<script src="js/app.js"></script>
+    
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.1.0/css/bootstrap.css" rel="stylesheet">
+	<link href="css/font-awesome.css" rel="stylesheet">
+	
+	<link href=
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<link href="css/toolbar.css" rel="stylesheet">
+    <style>
+			
+     	body{height:100%;margin:0;}     		
+		html{height:100%;}     
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar-fixed-bottom zzzBtnGroup100" role="toolbar">        
+	<div class=zzzMobileButtonLine></div>
+	<a type="button" class="btn btn-default zzzMobileButtonPrimary fa-hover btn-lg zzzButton1Of4 zzzMobileButtun pull-left "><i class="fa fa-plus"></i></a>
+	<a type="button" class="btn btn-default btn-lg fa-hover zzzButton1Of4 zzzMobileButtun  "><i class="fa fa-bolt"></i></a>
+	<a type="button" class="btn btn-default btn-lg fa-hover zzzButton1Of4 zzzMobileButtun  "><i class="fa fa-list"></i></span></a>
+	<a type="button" class="btn btn-default btn-lg fa-hover zzzButton1Of4 zzzMobileButtun  pull-right"><i class="fa fa-asterisk"></i></a>
+</nav>
+
+	
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="lib/jquery-2.1.1.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap-3.1.0/js/bootstrap.min.js"></script>
+ 
+<script> 
+$('.navbar-fixed-bottom .btn-default').click(function(e) {
+	var $this = $(this);
+	if (!$this.hasClass('zzzMobileButtonPrimary')) {
+		$('.navbar-fixed-bottom .btn-default').removeClass('zzzMobileButtonPrimary');
+	  	$this.addClass('zzzMobileButtonPrimary');
+		var lineMarker = $('.zzzMobileButtonLine');
+		if (lineMarker){	
+			//var animateLineLeft = $this.position().left - lineMarker.position().left;
+			var leftCss = $this.position().left + 'px';
+			lineMarker.animate({left: leftCss});
+		}
+	}
+	//e.preventDefault();
+});
+</script>
+
+</body>
+</html>
